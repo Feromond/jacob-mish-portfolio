@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Container, Typography, Grid, Chip, Avatar, List, ListItem, ListItemText, ListItemIcon, Slide, Zoom } from '@mui/material';
+import { Container, Typography, Grid, Chip, Avatar, List, ListItem, ListItemText, ListItemIcon, Slide, Zoom, Divider } from '@mui/material';
 import CodeIcon from '@mui/icons-material/Code';
 import LibraryIcon from '@mui/icons-material/LibraryBooks';
 import ToolsIcon from '@mui/icons-material/Build';
@@ -50,7 +50,7 @@ const Skills = () => {
 
     return(
     <Container sx={{ marginTop: '30px', padding: '20px', borderRadius: '15px' }}>
-        <Typography variant="h2" sx={{ marginBottom: '20px', color: 'primary.main' }}>Skills</Typography>
+        <Typography variant="h2" sx={{ marginBottom: '20px' }}>Skills</Typography>
         <Typography variant="h4" sx={{ color: 'secondary.main' }}>Technical Skills</Typography>
         <Grid container spacing={3}>
         {Object.entries(technicalSkills).map(([category, { skills, icon }], index) => (
@@ -69,6 +69,7 @@ const Skills = () => {
             </Slide>
         ))}
         </Grid>
+        <Divider sx={{ marginY: '30px' }} />
         <Typography variant="h4" sx={{ marginTop: '20px', color: 'secondary.main' }}>Soft Skills</Typography>
         <List>
         {softSkills.map(({ skill, icon }, idx) => (

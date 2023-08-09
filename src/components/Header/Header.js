@@ -4,18 +4,34 @@ import { AppBar, Toolbar, Typography, Button, IconButton, Box } from '@mui/mater
 import { Brightness4, Brightness7 } from '@mui/icons-material';
 
 const Header = ({ themeMode, toggleTheme }) => (
-  <AppBar position="static" sx={{ background: themeMode === 'dark' ? '#333' : '#2196f3' }}>
-    <Toolbar>
-      <Typography variant="h5" sx={{ flexGrow: 1, fontWeight: 'bold', marginLeft: '15px' }}>
+  <AppBar position="static" sx={{ background: themeMode === 'dark' ? '#333' : '#2196f3', boxShadow: 'none' }}>
+    <Toolbar sx={{ padding: '0 15px' }}>
+      <Typography variant="h6" sx={{ flexGrow: 1, fontWeight: 'bold', marginLeft: '15px', letterSpacing: '1px' }}>
         Portfolio Website
       </Typography>
-      <Box sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
-        {['About', 'Experience', 'Skills', 'Education', 'Projects', 'Social Links'].map((text, index) => (
-          <Button 
-            color="inherit" 
-            component={RouterLink} 
-            to={`/${text.toLowerCase() === 'about' ? '' : text.toLowerCase().replace(' ', '-')}`} 
-            sx={{ textTransform: 'none', fontWeight: 'medium' }}>
+      <Box
+        sx={{
+          display: 'flex',
+          flexDirection: 'row',
+          alignItems: 'center',
+          '& > :not(style):not(:last-child)': { mr: 2 },
+        }}
+      >
+        {['About', 'Experience', 'Skills', 'Education', 'Publications', 'Social Links'].map((text, index) => (
+          <Button
+            color="inherit"
+            component={RouterLink}
+            to={`/${text.toLowerCase() === 'about' ? '' : text.toLowerCase().replace(' ', '-')}`}
+            sx={{
+              textTransform: 'none',
+              fontWeight: 'medium',
+              padding: '6px 8px',
+              '&:hover': {
+                backgroundColor: themeMode === 'dark' ? '#444' : '#90caf9',
+                borderRadius: '4px',
+              },
+            }}
+          >
             {text}
           </Button>
         ))}

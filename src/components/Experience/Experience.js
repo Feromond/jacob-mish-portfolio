@@ -84,7 +84,7 @@ const Experience = () => (
 <Container sx={{ marginTop: '30px' }}>
     <Typography variant="h2" sx={{ marginBottom: '20px', textAlign: 'left' }}>Experience</Typography>
     {experiences.map((exp, idx) => (
-    <Slide direction="down" in={true} timeout={(idx + 1) * 300} key={exp.title}>
+    <Slide direction="down" in={true} timeout={(idx + 1) * 400} key={exp.title}>
         <Grid container spacing={3} direction={idx % 2 === 0 ? 'row' : 'row-reverse'} sx={{ marginBottom: '20px' }} alignItems="center" justifyContent="center">
         <Grid item xs={24} md={2} container justifyContent="center">
             <Avatar

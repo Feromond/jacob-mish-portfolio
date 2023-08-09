@@ -1,11 +1,13 @@
 import React from 'react';
 import { Container, Typography, Grid, Paper, Avatar } from '@mui/material';
 import jacobMishPortrait from '../../assets/jacob_mish_portrait.png';
+import backgroundImage from '../../assets/IMG_7244.jpeg';
 
 const About = () => (
   <Container sx={{ marginTop: '30px' }} >
-    <Grid container spacing={20} justifyContent={"center"} alignItems={"center"}>
-      <Grid item xs={8} md={4} >
+    <Grid container spacing={0} justifyContent={"center"} alignItems={"center"} 
+          sx={{ background: `url(${backgroundImage})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+      <Grid item xs={8} md={4}>
         <Avatar
           alt="Jacob Mish"
           src={jacobMishPortrait}
@@ -13,14 +15,14 @@ const About = () => (
             width: 396,
             height: 413,
             borderRadius: '50%', 
-            border: '2px solid #2196f3'
+            border: '12px solid #FFFF'
           }}
         />
       </Grid>
       <Grid item xs={8} md={7}>
-        <Paper elevation={3} sx={{ padding: '40px' }}>
-          <Typography variant="h2" sx={{ fontWeight: '500' }}>Jacob Mish</Typography>
-          <Typography variant="h5" sx={{ fontWeight: '500' }}>Machine Learning Engineer / Data Engineer</Typography>
+        <Paper elevation={3} sx={{ padding: '40px', background: 'rgba(255, 255, 255, 0.9)' }}>
+          <Typography variant="h2" sx={{ fontWeight: '500', color: '#333' }}>Jacob Mish</Typography>
+          <Typography variant="h5" sx={{ fontWeight: '500', color: '#333' }}>Machine Learning Engineer / Data Engineer</Typography>
         </Paper>
       </Grid>
     </Grid>
