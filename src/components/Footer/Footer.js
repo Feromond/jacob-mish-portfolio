@@ -12,28 +12,28 @@ const Footer = () => {
         <Grid container spacing={4} justifyContent="center" alignItems="center">
           <Grid item>
             <IconButton color="primary">
-              <Link href="https://www.linkedin.com/in/your-linkedin-profile" target="_blank" rel="noopener">
+              <Link href="https://www.linkedin.com/in/jacob-mish-25915722a/" target="_blank" rel="noopener">
                 <LinkedInIcon />
               </Link>
             </IconButton>
           </Grid>
           <Grid item>
             <IconButton color="primary">
-              <Link href="https://github.com/your-github-username" target="_blank" rel="noopener">
+              <Link href="https://github.com/Feromond" target="_blank" rel="noopener">
                 <GitHubIcon />
               </Link>
             </IconButton>
           </Grid>
           <Grid item>
             <IconButton color="primary">
-              <Link href="mailto:your-email@example.com" target="_blank" rel="noopener">
+              <Link href="mailto:JacobPMish@gmail.com" target="_blank" rel="noopener">
                 <EmailIcon />
               </Link>
             </IconButton>
           </Grid>
           <Grid item>
             <IconButton color="primary">
-              <Link href="tel:+1-123-456-7890" target="_blank" rel="noopener">
+              <Link href="tel:+1-403-836-9391" target="_blank" rel="noopener">
                 <PhoneIcon />
               </Link>
             </IconButton>
