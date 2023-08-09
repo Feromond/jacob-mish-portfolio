@@ -84,9 +84,9 @@ const Experience = () => (
 <Container sx={{ marginTop: '30px' }}>
     <Typography variant="h2" sx={{ marginBottom: '20px', textAlign: 'left' }}>Experience</Typography>
     {experiences.map((exp, idx) => (
-    <Slide direction="down" in={true} timeout={(idx + 1) * 180} key={exp.title}>
+    <Slide direction="down" in={true} timeout={(idx + 1) * 300} key={exp.title}>
         <Grid container spacing={3} direction={idx % 2 === 0 ? 'row' : 'row-reverse'} sx={{ marginBottom: '20px' }} alignItems="center" justifyContent="center">
-        <Grid item xs={12} md={2} container justifyContent="center">
+        <Grid item xs={24} md={2} container justifyContent="center">
             <Avatar
             alt={exp.company}
             src={exp.logo}
@@ -98,7 +98,7 @@ const Experience = () => (
             }}
             />
         </Grid>
-        <Grid item xs={12} md={8}>
+        <Grid item xs={24} md={10}>
             <Card variant="outlined" elevation={3} sx={{ borderRadius: '20px' }}>
             <CardContent>
                 <Typography variant="h5">{exp.title}</Typography>
