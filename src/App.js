@@ -16,14 +16,63 @@ import CssBaseline from '@mui/material/CssBaseline';
 const darkTheme = createTheme({
   palette: {
     mode: 'dark',
+    primary: {
+      main: '#90caf9', // Light Blue
+    },
+    secondary: {
+      main: '#f48fb1', // Pink
+    },
+    background: {
+      default: '#121212',
+      paper: '#1d1d1d',
+    },
+    text: {
+      primary: '#e0e0e0', // Light Grey
+    },
+  },
+  typography: {
+    fontFamily: 'Arial, sans-serif',
+    h2: {
+      fontWeight: 500,
+      fontSize: 32,
+    },
+    h5: {
+      fontWeight: 400,
+      fontSize: 20,
+    },
   },
 });
 
 const lightTheme = createTheme({
   palette: {
     mode: 'light',
+    primary: {
+      main: '#1976d2', // Dark Blue
+    },
+    secondary: {
+      main: '#e57373', // Light Red
+    },
+    background: {
+      default: '#fafafa',
+      paper: '#ffffff',
+    },
+    text: {
+      primary: '#333333', // Dark Grey
+    },
+  },
+  typography: {
+    fontFamily: 'Georgia, serif',
+    h2: {
+      fontWeight: 500,
+      fontSize: 32,
+    },
+    h5: {
+      fontWeight: 400,
+      fontSize: 20,
+    },
   },
 });
+
 
 function App() {
   const [themeMode, setThemeMode] = useState('dark');
