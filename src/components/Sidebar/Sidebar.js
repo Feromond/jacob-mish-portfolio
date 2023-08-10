@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link as RouterLink } from 'react-router-dom';
 import { IconButton, Box, Drawer, List, ListItem, ListItemIcon, ListItemText, useTheme } from '@mui/material';
 import { Brightness4, Brightness7, Menu as MenuIcon, Home, Work, School, Book, BarChart, Link as LinkIcon } from '@mui/icons-material';
+import { useLocation } from 'react-router-dom';
 
 const Sidebar = ({ themeMode, toggleTheme }) => {
   const theme = useTheme();
@@ -12,34 +13,42 @@ const Sidebar = ({ themeMode, toggleTheme }) => {
     setDrawerOpen(!drawerOpen);
   };
 
+  
   const menuIcons = [<Home />, <Work />, <BarChart />, <School />, <Book />, <LinkIcon />];
   const iconColors = ['#F94144', '#F3722C', '#F8961E', '#F9C74F', '#90BE6D', '#43AA8B'];
+  
+  const location = useLocation();
+  const menuItems = ['About', 'Experience', 'Skills', 'Education', 'Publications', 'Social Links'].map((text, index) => {
+    const path = `/${text.toLowerCase() === 'about' ? '' : text.toLowerCase().replace(' ', '-')}`;
 
-  const menuItems = ['About', 'Experience', 'Skills', 'Education', 'Publications', 'Social Links'].map((text, index) => (
-    <ListItem
-      key={text}
-      button
-      component={RouterLink}
-      to={`/${text.toLowerCase() === 'about' ? '' : text.toLowerCase().replace(' ', '-')}`}
-      sx={{
-        textTransform: 'none',
-        fontWeight: 'medium',
-        padding: '12px 16px',
-        color: theme.palette.text.primary,
-        transition: 'transform .2s, box-shadow .2s',
-        '&:hover': {
-          transform: 'scale(1.05)',
-          backgroundColor: themeMode === 'dark' ? theme.palette.primary.dark : theme.palette.primary.light,
-          borderRadius: '4px',
-          boxShadow: '0 4px 20px rgba(0,0,0,0.1)',
-        },
-      }}
-      onClick={handleDrawerToggle}
-    >
-      <ListItemIcon sx={{ color: iconColors[index] }}>{menuIcons[index]}</ListItemIcon>
-      <ListItemText primary={text} />
-    </ListItem>
-  ));
+    return (
+      <ListItem
+        key={text}
+        button
+        component={RouterLink}
+        to={path}
+        sx={{
+          textTransform: 'none',
+          fontWeight: 'medium',
+          padding: '12px 16px',
+          color: theme.palette.text.primary,
+          backgroundColor: location.pathname === path ? (themeMode === 'dark' ? theme.palette.primary.dark : theme.palette.primary.light) : 'transparent', // Highlight current page
+          transition: 'transform .2s, box-shadow .2s',
+          '&:hover': {
+            transform: 'scale(1.05)',
+            backgroundColor: themeMode === 'dark' ? theme.palette.primary.dark : theme.palette.primary.light,
+            borderRadius: '4px',
+            boxShadow: '0 4px 20px rgba(0,0,0,0.1)',
+          },
+        }}
+        onClick={handleDrawerToggle}
+      >
+        <ListItemIcon sx={{ color: iconColors[index] }}>{menuIcons[index]}</ListItemIcon>
+        <ListItemText primary={text} />
+      </ListItem>
+    );
+  });
+
 
   return (
     <Box sx={{ display: 'flex', alignItems: 'center' }}>
