@@ -12,9 +12,11 @@ import CollaborationIcon from '@mui/icons-material/GroupWork';
 import { styled } from '@mui/system';
 
 const StyledChip = styled(Chip)`
-  transition: transform 0.3s;
+  transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
   &:hover {
     transform: scale(1.1);
+    background-color: rgba(0, 150, 136, 0.8); // Example color
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
   }
 `;
 
@@ -51,26 +53,40 @@ const Skills = () => {
     return(
     <Container sx={{ marginTop: '30px', padding: '20px', borderRadius: '15px' }}>
         <Typography variant="h2" sx={{ marginBottom: '20px' }}>Skills</Typography>
-        <Typography variant="h4" sx={{ color: 'secondary.main' }}>Technical Skills</Typography>
+        <Typography variant="h3" sx={{ color: 'secondary.main' }}>Technical Skills</Typography>
         <Grid container spacing={3}>
-        {Object.entries(technicalSkills).map(([category, { skills, icon }], index) => (
-            <Slide direction="up" in={true} mountOnEnter unmountOnExit timeout={index * 300} key={category}>
-            <Grid item xs={12} sm={6}>
-                <Typography variant="h6" sx={{ color: 'primary.main' }}>
-                <Avatar sx={{ bgcolor: 'secondary.main', marginRight: '5px' }}>{icon}</Avatar>
-                {category}:
-                </Typography>
-                {skills.map(skill => (
-                <Zoom in={true} timeout={1000} key={skill}>
-                    <StyledChip label={skill} variant="filled" color="secondary" sx={{ margin: '5px' }} />
-                </Zoom>
-                ))}
+            {Object.entries(technicalSkills).map(([category, { skills, icon }], index) => {
+                const colorIndex = index % 3;
+                let chipColor = 'error';
+                let avatarColor = 'error.main';
+
+                if (colorIndex === 1) {
+                    chipColor = 'primary';
+                    avatarColor = 'primary.main';
+                } else if (colorIndex === 2) {
+                    chipColor = 'secondary';
+                    avatarColor = 'secondary.main';
+                }
+
+                return (
+                    <Slide direction="up" in={true} mountOnEnter unmountOnExit timeout={index * 300} key={category}>
+                    <Grid item xs={12} sm={6}>
+                        <Typography variant="h4" sx={{ color: 'info.main' }}>
+                        <Avatar sx={{ bgcolor: avatarColor, marginRight: '5px' }}>{icon}</Avatar>
+                        {category}:
+                        </Typography>
+                        {skills.map(skill => (
+                        <Zoom in={true} timeout={1000} key={skill}>
+                            <StyledChip label={skill} variant="filled" color={chipColor} sx={{ margin: '5px' }} />
+                        </Zoom>
+                        ))}
+                    </Grid>
+                    </Slide>
+                );
+            })}
             </Grid>
-            </Slide>
-        ))}
-        </Grid>
         <Divider sx={{ marginY: '30px' }} />
-        <Typography variant="h4" sx={{ marginTop: '20px', color: 'secondary.main' }}>Soft Skills</Typography>
+        <Typography variant="h3" sx={{ marginTop: '20px', color: 'secondary.main' }}>Soft Skills</Typography>
         <List>
         {softSkills.map(({ skill, icon }, idx) => (
           <Slide
