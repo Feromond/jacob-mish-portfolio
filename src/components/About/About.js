@@ -8,16 +8,19 @@ const About = () => (
     <Grid container spacing={0} justifyContent={"center"} alignItems={"center"} 
           sx={{ background: `url(${backgroundImage})`, backgroundSize: 'cover', backgroundPosition: 'center', borderRadius: '2%'}}>
       <Grid item xs={8} md={4}>
-        <Avatar
-          alt="Jacob Mish"
-          src={jacobMishPortrait}
-          sx={{
-            width: 396,
-            height: 413,
-            borderRadius: '50%', 
-            border: '12px solid #FFFF'
-          }}
-        />
+      <Avatar
+        alt="Jacob Mish"
+        src={jacobMishPortrait}
+        sx={{
+          width: { xs: '80%', md: 396 }, // 80% width on small screens, 396px on medium and up
+          height: { xs: 'auto', md: 413 }, // auto height on small screens, 413px on medium and up
+          borderRadius: '50%', 
+          border: '12px solid #FFFF',
+          display: 'block', // to center the image
+          marginLeft: 'auto',
+          marginRight: 'auto',
+        }}
+      />
       </Grid>
       <Grid item xs={8} md={7}>
         <Paper elevation={3} sx={{ padding: '40px', background: 'rgba(255, 255, 255, 0.9)' }}>
