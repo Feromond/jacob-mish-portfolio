@@ -95,6 +95,17 @@ const experiences = [
                   height: { xs: 100, md: 150 },
                   borderRadius: exp.shape === 'round' ? '50%' : '10%',
                   transform: `scale(${exp.zoom || 1})`,
+                  transition: '0.3s',
+                  "&:hover": {
+                    animation: 'wiggle 0.5s ease 1.5',
+                    '@keyframes wiggle': {
+                      '0%': { transform: 'rotate(-3deg) translateY(0px)' },
+                      '25%': { transform: 'rotate(3deg) translateY(-5px)' },
+                      '50%': { transform: 'rotate(-3deg) translateY(0px)' },
+                      '75%': { transform: 'rotate(3deg) translateY(-5px)' },
+                      '100%': { transform: 'rotate(-3deg) translateY(0px)' },
+                    }
+                  }
                 }}
               />
             </Grid>
