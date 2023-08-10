@@ -5,7 +5,7 @@ import UniversityIcon from '@mui/icons-material/AccountBalance';
 
 const Education = () => (
   <Container sx={{ marginTop: '30px' }}>
-    <Typography variant="h2" sx={{ marginBottom: '20px', fontWeight: '500' }}>Education</Typography>
+    <Typography variant="h2" sx={{ marginBottom: '20px'}}>Education</Typography>
 
     <Grid container spacing={3}>
       <Grid item xs={12} md={6}>

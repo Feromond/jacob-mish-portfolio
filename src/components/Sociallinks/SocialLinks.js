@@ -8,7 +8,7 @@ import PhoneIcon from '@mui/icons-material/Phone';
 const SocialLinks = () => {
   return (
     <Container sx={{ marginTop: '30px' }}>
-      <Typography variant="h2" sx={{ marginBottom: '20px', fontWeight: '500', textAlign: 'center' }}>Social Links</Typography>
+      <Typography variant="h2" sx={{ marginBottom: '20px', textAlign: 'center' }}>Social Links</Typography>
       <Paper elevation={3} sx={{ padding: '40px', textAlign: 'center' }}>
         <Grid container spacing={4} justifyContent="center" alignItems="center">
           <Grid item>

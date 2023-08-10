@@ -43,7 +43,7 @@ const Publications = () => {
 
   return (
     <Container sx={{ marginTop: '30px' }}>
-      <Typography variant="h2" sx={{ marginBottom: '20px', fontWeight: '500' }}>Publications</Typography>
+      <Typography variant="h2" sx={{ marginBottom: '20px'}}>Publications</Typography>
       <animated.div style={props}>
         {publications.map((publication, index) => (
           <Box key={index} sx={{ marginBottom: '20px' }}>

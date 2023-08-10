@@ -7,7 +7,7 @@ const About = () => (
   <Container >
     <Grid container spacing={0} justifyContent={"center"} alignItems={"center"} 
           sx={{ background: `url(${backgroundImage})`, backgroundSize: 'cover', backgroundPosition: 'center', borderRadius: '2%'}}>
-      <Grid item xs={8} md={4}>
+      <Grid item xs={8} md={3.98}>
       <Avatar
         alt="Jacob Mish"
         src={jacobMishPortrait}
@@ -22,16 +22,16 @@ const About = () => (
         }}
       />
       </Grid>
-      <Grid item xs={8} md={7}>
-        <Paper elevation={3} sx={{ padding: '40px', background: 'rgba(255, 255, 255, 0.9)' }}>
-          <Typography variant="h2" sx={{ fontWeight: '500', color: '#333' }}>Jacob Mish</Typography>
-          <Typography variant="h5" sx={{ fontWeight: '500', color: '#333' }}>Machine Learning Engineer / Data Engineer</Typography>
+      <Grid item xs={8} md={6}>
+        <Paper elevation={3} sx={{ padding: '40px', background: 'rgba(255, 255, 255, 0.9)', borderRadius: '10% 10%'}}>
+          <Typography variant="h2" sx={{color: '#333' }}>Jacob Mish</Typography>
+          <Typography variant="h5" sx={{color: '#333' }}>Machine Learning Engineer / Data Engineer</Typography>
         </Paper>
       </Grid>
     </Grid>
     <Grid item xs={8} md={7} justifyContent={"center"} alignItems={"center"}>
         <Paper elevation={4} sx={{ padding: '50px' }}>
-          <Typography variant="h2" sx={{ fontWeight: '500' }}>About Me</Typography>
+          <Typography variant="h2" sx={{}}>About Me</Typography>
           <Typography variant="h6">
             <p>I am a passionate data professional with a strong focus on machine learning and data science. My educational background in geophysics and computer science has provided me with a unique perspective in tackling complex data-related challenges. Proficient in programming languages like Python, Java, and Rust, and experienced in using libraries such as Numpy, Pandas, Tensorflow, and Pytorch. My expertise includes developing ML models, creating efficient data pipelines, and utilizing cloud computing platforms like AWS and Azure. I have a strong track record of success, including predicting rock permeability with 94% accuracy and detecting geohazards using CNNs. With excellent communication and collaboration skills, I am able to effectively convey complex technical information and work well with cross-functional teams in a diverse range of projects.</p>
 
