@@ -1,5 +1,6 @@
 // src/App.js
 import React, { useState } from 'react';
+import { Helmet } from 'react-helmet';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import About from './components/About/About';
 import Experience from './components/Experience/Experience';
@@ -11,6 +12,7 @@ import Sidebar from './components/Sidebar/Sidebar';
 import Footer from './components/Footer/Footer';
 import { ThemeProvider, createTheme} from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
+
 
 export function remToPx(value) {
   return Math.round(parseFloat(value) * 16);
@@ -267,8 +269,11 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-        <Router>
-          <Sidebar themeMode={themeMode} toggleTheme={toggleTheme} />
+      <Helmet>
+        <meta name="theme-color" content="#673AAC" /> 
+      </Helmet>
+      <Router>
+        <Sidebar themeMode={themeMode} toggleTheme={toggleTheme} />
           <Routes>
             <Route path="/" element={<About />} />
             <Route path="/experience" element={<Experience />} />
