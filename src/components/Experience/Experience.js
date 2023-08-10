@@ -80,68 +80,64 @@ const experiences = [
   
   
 
-const Experience = () => (
-<Container sx={{ marginTop: '30px' }}>
-    <Typography variant="h2" sx={{ marginBottom: '20px', textAlign: 'left' }}>Experience</Typography>
-    {experiences.map((exp, idx) => (
-    <Slide direction="down" in={true} timeout={(idx + 1) * 400} key={exp.title}>
-        <Grid container spacing={3} direction={idx % 2 === 0 ? 'row' : 'row-reverse'} sx={{ marginBottom: '20px' }} alignItems="center" justifyContent="center">
-        <Grid item xs={24} md={2} container justifyContent="center">
-            <Avatar
-            alt={exp.company}
-            src={exp.logo}
-            sx={{
-                width: { xs: 100, md: 150 },
-                height: { xs: 100, md: 150 },
-                borderRadius: exp.shape === 'round' ? '50%' : '10%',
-                transform: `scale(${exp.zoom || 1})`,
-            }}
+  const Experience = () => (
+    <Container sx={{ marginTop: '30px' }}>
+      <Typography variant="h2" sx={{ marginBottom: '20px', textAlign: 'left' }}>Experience</Typography>
+      {experiences.map((exp, idx) => (
+        <Slide direction="down" in={true} timeout={(idx + 1) * 400} key={exp.title}>
+          <Grid container spacing={3} direction={idx % 2 === 0 ? 'row' : 'row-reverse'} sx={{ marginBottom: '20px' }} alignItems="center" justifyContent="center">
+            <Grid item xs={24} md={2} container justifyContent="center">
+              <Avatar
+                alt={exp.company}
+                src={exp.logo}
+                sx={{
+                  width: { xs: 100, md: 150 },
+                  height: { xs: 100, md: 150 },
+                  borderRadius: exp.shape === 'round' ? '50%' : '10%',
+                  transform: `scale(${exp.zoom || 1})`,
+                }}
+              />
+            </Grid>
+            <Grid item xs={24} md={10}>
+              <Card variant="outlined" elevation={0} sx={{ borderRadius: '20px', transition: '0.3s', transform: 'scale(1)', "&:hover": { transform: 'scale(1.05)', boxShadow: '5px 5px 15px rgba(0,0,0,0.3)' } }}>
+                <CardContent>
+                  <Typography variant="h5">{exp.title}</Typography>
+                  <Typography variant="h6">{exp.duration} | {exp.company} | {exp.location}</Typography>
+                  <ul>
+                    {exp.responsibilities.map((responsibility) => (
+                      <li key={responsibility}><Typography variant="body1">{responsibility}</Typography></li>
+                    ))}
+                  </ul>
+                </CardContent>
+              </Card>
+            </Grid>
+          </Grid>
+        </Slide>
+      ))}
+      <Divider sx={{ marginY: '30px' }} />
+      <div>
+        <Typography variant="h3" sx={{ marginBottom: '10px', textAlign: 'left' }}>
+          Other Experiences
+        </Typography>
+        <List>
+          <ListItem>
+            <ListItemText
+              primary="Medical Office Assistant"
+              secondary="Dr. Noiles & Mish Medical Clinic"
             />
-        </Grid>
-        <Grid item xs={24} md={10}>
-            <Card variant="outlined" elevation={0} sx={{ borderRadius: '20px' }}>
-            <CardContent>
-                <Typography variant="h5">{exp.title}</Typography>
-                <Typography variant="h6">{exp.duration} | {exp.company} | {exp.location}</Typography>
-                <ul>
-                {exp.responsibilities.map((responsibility) => (
-                    <li key={responsibility}><Typography variant="body1">{responsibility}</Typography></li>
-                ))}
-                </ul>
-            </CardContent>
-            </Card>
-        </Grid>
-        </Grid>
-    </Slide>
-    ))}
-    <Divider sx={{ marginY: '30px' }} />
-    <div>
-      <Typography variant="h3" sx={{ marginBottom: '10px', textAlign: 'left' }}>
-        Other Experiences
-      </Typography>
-      <List>
-        <ListItem>
-          <ListItemText
-            primary="Medical Office Assistant"
-            secondary="Dr. Noiles & Mish Medical Clinic"
-          />
-        </ListItem>
-        <ListItem>
-          <ListItemText
-            primary="Pizza Restaurant Supervisor"
-            secondary="Andaros Pizza"
-          />
-        </ListItem>
-        <ListItem>
-          <ListItemText primary="Volunteer" secondary="Youth Central" />
-        </ListItem>
-      </List>
-    </div>
-</Container>
-);
-
-export default Experience;
-
-
-
-
+          </ListItem>
+          <ListItem>
+            <ListItemText
+              primary="Pizza Restaurant Supervisor"
+              secondary="Andaros Pizza"
+            />
+          </ListItem>
+          <ListItem>
+            <ListItemText primary="Volunteer" secondary="Youth Central" />
+          </ListItem>
+        </List>
+      </div>
+    </Container>
+  );
+  
+  export default Experience;
