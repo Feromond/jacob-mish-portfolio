@@ -9,7 +9,7 @@ import Publications from './components/Publications/Publications';
 import SocialLinks from './components/Sociallinks/SocialLinks';
 import Sidebar from './components/Sidebar/Sidebar';
 import Footer from './components/Footer/Footer';
-import { ThemeProvider, createTheme, alpha } from '@mui/material/styles';
+import { ThemeProvider, createTheme} from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 
 export function remToPx(value) {

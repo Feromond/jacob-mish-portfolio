@@ -99,7 +99,7 @@ const Experience = () => (
             />
         </Grid>
         <Grid item xs={24} md={10}>
-            <Card variant="outlined" elevation={3} sx={{ borderRadius: '20px' }}>
+            <Card variant="outlined" elevation={0} sx={{ borderRadius: '20px' }}>
             <CardContent>
                 <Typography variant="h5">{exp.title}</Typography>
                 <Typography variant="h6">{exp.duration} | {exp.company} | {exp.location}</Typography>
