@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link as RouterLink } from 'react-router-dom';
 import { IconButton, Box, Drawer, List, ListItem, ListItemIcon, ListItemText, useTheme } from '@mui/material';
-import { Brightness4, Brightness7, Menu as MenuIcon, Home, Work, School, Book, BarChart, Link as LinkIcon } from '@mui/icons-material';
+import { Brightness4, Brightness7, Menu as MenuIcon, Home, Work, School, Book, BarChart, Assessment } from '@mui/icons-material';
 import { useLocation } from 'react-router-dom';
 
 const Sidebar = ({ themeMode, toggleTheme }) => {
@@ -14,11 +14,11 @@ const Sidebar = ({ themeMode, toggleTheme }) => {
   };
 
   
-  const menuIcons = [<Home />, <Work />, <BarChart />, <School />, <Book />, <LinkIcon />];
+  const menuIcons = [<Home />, <Work />, <BarChart />, <School />, <Book />, <Assessment />];
   const iconColors = ['#F94144', '#F3722C', '#F8961E', '#F9C74F', '#90BE6D', '#43AA8B'];
   
   const location = useLocation();
-  const menuItems = ['About', 'Experience', 'Skills', 'Education', 'Publications', 'Social Links'].map((text, index) => {
+  const menuItems = ['About', 'Experience', 'Skills', 'Education', 'Publications', 'Projects'].map((text, index) => {
     const path = `/${text.toLowerCase() === 'about' ? '' : text.toLowerCase().replace(' ', '-')}`;
 
     return (

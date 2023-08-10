@@ -7,7 +7,7 @@ import Experience from './components/Experience/Experience';
 import Skills from './components/Skills/Skills';
 import Education from './components/Education/Education';
 import Publications from './components/Publications/Publications';
-import SocialLinks from './components/Sociallinks/SocialLinks';
+import Projects from './components/Projects/Projects';
 import Sidebar from './components/Sidebar/Sidebar';
 import Footer from './components/Footer/Footer';
 import { ThemeProvider, createTheme} from '@mui/material/styles';
@@ -280,7 +280,7 @@ function App() {
             <Route path="/skills" element={<Skills />} />
             <Route path="/education" element={<Education />} />
             <Route path="/publications" element={<Publications />} />
-            <Route path="/social-links" element={<SocialLinks />} />
+            <Route path="/projects" element={<Projects />} />
           </Routes>
           <Footer />
         </Router>
