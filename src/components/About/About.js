@@ -4,9 +4,9 @@ import jacobMishPortrait from '../../assets/jacob_mish_portrait.png';
 import backgroundImage from '../../assets/IMG_7244.jpeg';
 
 const About = () => (
-  <Container sx={{ marginTop: '30px' }} >
+  <Container >
     <Grid container spacing={0} justifyContent={"center"} alignItems={"center"} 
-          sx={{ background: `url(${backgroundImage})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+          sx={{ background: `url(${backgroundImage})`, backgroundSize: 'cover', backgroundPosition: 'center', borderRadius: '2%'}}>
       <Grid item xs={8} md={4}>
         <Avatar
           alt="Jacob Mish"
