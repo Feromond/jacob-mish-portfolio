@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Typography, Card, CardContent, Grid, Avatar, Slide, Divider} from '@mui/material';
+import { Container, Typography, Card, CardContent, Grid, Avatar, Slide, Divider, List, ListItem, ListItemText } from '@mui/material';
 import strathconaLogo from '../../assets/strathconaLogo.png';
 import altaMLLogo from '../../assets/altaml-logo.png';
 import uofcLogo from '../../assets/uofcLogo.png';
@@ -115,10 +115,28 @@ const Experience = () => (
     </Slide>
     ))}
     <Divider sx={{ marginY: '30px' }} />
-    <Typography variant="h4" sx={{ marginBottom: '10px', textAlign: 'left' }}>Other Experiences</Typography>
-    <Typography variant="body1">Medical Office Assistant - Dr. Noiles & Mish Medical Clinic</Typography>
-    <Typography variant="body1">Pizza Restaurant Supervisor - Andaros Pizza</Typography>
-    <Typography variant="body1"> Volunteer - Youth Central</Typography>
+    <div>
+      <Typography variant="h3" sx={{ marginBottom: '10px', textAlign: 'left' }}>
+        Other Experiences
+      </Typography>
+      <List>
+        <ListItem>
+          <ListItemText
+            primary="Medical Office Assistant"
+            secondary="Dr. Noiles & Mish Medical Clinic"
+          />
+        </ListItem>
+        <ListItem>
+          <ListItemText
+            primary="Pizza Restaurant Supervisor"
+            secondary="Andaros Pizza"
+          />
+        </ListItem>
+        <ListItem>
+          <ListItemText primary="Volunteer" secondary="Youth Central" />
+        </ListItem>
+      </List>
+    </div>
 </Container>
 );
 
