@@ -8,7 +8,7 @@ const About = () => (
     <Grid container spacing={0} justifyContent={"center"} alignItems={"center"} 
           sx={{ background: `url(${backgroundImage})`, backgroundSize: 'cover', backgroundPosition: 'center', borderRadius: '2%'}}>
       <Grid item xs={8} md={3.98}>
-        <Paper elevation={10} sx={{ borderRadius: '40%', background: "transparent" }}>
+        <Paper elevation={10} sx={{ borderRadius: '45%', background: "transparent" }}>
           <Avatar
             alt="Jacob Mish"
             src={jacobMishPortrait}
@@ -24,7 +24,7 @@ const About = () => (
         </Paper>
       </Grid>
       <Grid item xs={8} md={6}>
-        <Paper elevation={10} sx={{ padding: '40px', background: 'transparent', borderRadius: '10% 10%'}}>
+        <Paper elevation={0} sx={{ padding: '30px', background: 'transparent', borderRadius: '10% 10%'}}>
         <Typography variant="h2" sx={{ color: '#fff', textShadow: '2px 2px 4px rgba(0, 0, 0, 1)' }}>Jacob Mish</Typography>
           <Typography variant="h5" sx={{color: '#fff', textShadow: '2px 2px 4px rgba(0, 0, 0, 1)' }}>Machine Learning Engineer / Data Engineer</Typography>
         </Paper>
