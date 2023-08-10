@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link as RouterLink } from 'react-router-dom';
-import { IconButton, Box, Drawer, List, ListItem, useMediaQuery, useTheme } from '@mui/material';
+import { IconButton, Box, Drawer, List, ListItem, useTheme } from '@mui/material';
 import { Brightness4, Brightness7, Menu as MenuIcon } from '@mui/icons-material';
 
 const Sidebar = ({ themeMode, toggleTheme }) => {
