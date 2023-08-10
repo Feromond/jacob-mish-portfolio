@@ -4,7 +4,6 @@ import LinkIcon from '@mui/icons-material/Link';
 import { useSpring, animated } from 'react-spring';
 
 
-
 const Publications = () => {
   const publications = [
     {
@@ -34,7 +33,6 @@ const Publications = () => {
     
   ];
 
-
   const props = useSpring({
     from: { opacity: 0, transform: 'translate3d(0,-40px,0)' },
     to: { opacity: 1, transform: 'translate3d(0,0px,0)' },
@@ -47,7 +45,7 @@ const Publications = () => {
       <animated.div style={props}>
         {publications.map((publication, index) => (
           <Box key={index} sx={{ marginBottom: '20px' }}>
-            <Card elevation={3}>
+            <Card elevation={3} sx={{ borderRadius: '10px', transition: '0.3s', transform: 'scale(1)', "&:hover": { transform: 'scale(1.03)', boxShadow: '5px 5px 15px rgba(0,0,0,0.3)' } }}>
               <CardHeader
                 title={publication.title}
                 subheader={publication.authors}
