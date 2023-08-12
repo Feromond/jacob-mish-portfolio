@@ -156,7 +156,7 @@ const lightTheme = createTheme({
     primary: {
       lighter: '#D1E9FC',
       light: '#76B0F1',
-      main: '#2065D1',
+      main: '#2065D1', //'rgba(58, 86, 81)' SOMEWHAT NICE GREEN COLOR
       dark: '#103996',
       darker: '#061B64',
       contrastText: '#fff',
@@ -164,7 +164,7 @@ const lightTheme = createTheme({
     secondary: {
       lighter: '#D6E4FF',
       light: '#84A9FF',
-      main: '#3366FF',
+      main: '#3366FF', //'rgba(235, 234, 227)' SOMEWHAT NICE VERY LIGHT GREEN
       dark: '#1939B7',
       darker: '#091A7A',
       contrastText: '#fff',

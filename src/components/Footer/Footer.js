@@ -40,7 +40,8 @@ const Footer = () => {
           </Grid>
         </Grid>
         <Typography variant="body2" align="center" sx={{ marginTop: '10px' }}>© Jacob Mish 2023</Typography>
-        <Typography variant="body2" align="center" sx={{ marginTop: '10px' }}>Website Still Under Construction</Typography>
+        <Typography variant="body2" align="center" sx={{ marginTop: '10px' }}>Website Still Under Construction - Started On August 9th</Typography>
+        <Typography variant="body2" align="center" sx={{ marginTop: '10px' }}>Created Using React: https://github.com/Feromond/jacob-mish-portfolio</Typography>
       </Container>
     </Box>
   );

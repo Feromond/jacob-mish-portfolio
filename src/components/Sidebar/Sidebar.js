@@ -52,9 +52,18 @@ const Sidebar = ({ themeMode, toggleTheme }) => {
 
   return (
     <Box sx={{ display: 'flex', alignItems: 'center' }}>
-      <IconButton edge="start" color="inherit" onClick={handleDrawerToggle} sx={{ marginLeft: 2 }}>
-        <MenuIcon />
-      </IconButton>
+      <IconButton 
+      edge="start" 
+      color="inherit" 
+      onClick={handleDrawerToggle} 
+      sx={{ 
+        marginLeft: 2,
+        '&:hover': {
+          backgroundColor: '#673AAC', 
+        },
+      }}>
+      <MenuIcon sx={{ fontSize: 45, color: '#F94144' }} /> 
+    </IconButton>
       <Drawer
         variant="temporary"
         anchor="left"
