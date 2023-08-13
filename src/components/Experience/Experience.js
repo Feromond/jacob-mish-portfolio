@@ -97,13 +97,13 @@ const experiences = [
                   transform: `scale(${exp.zoom || 1})`,
                   transition: '0.3s',
                   "&:hover": {
-                    animation: 'wiggle 0.5s ease 1.5',
+                    animation: 'wiggle 0.5s ease 2.0',
                     '@keyframes wiggle': {
                       '0%': { transform: 'rotate(-3deg) translateY(0px)' },
                       '25%': { transform: 'rotate(3deg) translateY(-5px)' },
                       '50%': { transform: 'rotate(-3deg) translateY(0px)' },
                       '75%': { transform: 'rotate(3deg) translateY(-5px)' },
-                      '100%': { transform: 'rotate(-3deg) translateY(0px)' },
+                      // '100%': { transform: 'rotate(-3deg) translateY(0px)' },
                     }
                   }
                 }}
