@@ -45,6 +45,7 @@ const darkTheme = createTheme({
   palette: {
     mode: 'dark',
     primary: {
+      special: '#673AAC',
       lighter: '#3A5A97',
       light: '#234A8D',
       main: '#103996',
@@ -154,6 +155,7 @@ const lightTheme = createTheme({
   palette: {
     mode: 'light',
     primary: {
+      special: '#673AAC',
       lighter: '#D1E9FC',
       light: '#76B0F1',
       main: '#2065D1', //'rgba(58, 86, 81)' SOMEWHAT NICE GREEN COLOR
