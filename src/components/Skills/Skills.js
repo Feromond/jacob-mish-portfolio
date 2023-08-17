@@ -91,7 +91,10 @@ const Skills = () => {
 	};
 
 	useEffect(() => {
-		if (softSkillsRef.current && checkInitialVisibility()) {
+		// Capture the current value of the ref in a local variable
+		const currentRef = softSkillsRef.current;
+
+		if (currentRef && checkInitialVisibility()) {
 			const timeout = setTimeout(() => {
 				setIsSoftSkillsVisible(true);
 			}, technicalSkillsDelay);
@@ -111,13 +114,14 @@ const Skills = () => {
 			}
 		);
 
-		if (softSkillsRef.current) {
-			observer.observe(softSkillsRef.current);
+		if (currentRef) {
+			observer.observe(currentRef);
 		}
 
+		// Use the local variable in the cleanup function
 		return () => {
-			if (softSkillsRef.current) {
-				observer.unobserve(softSkillsRef.current);
+			if (currentRef) {
+				observer.unobserve(currentRef);
 			}
 		};
 	}, [technicalSkillsDelay]);
