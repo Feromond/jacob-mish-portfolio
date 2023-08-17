@@ -8,7 +8,7 @@ import Skills from './components/Skills/Skills';
 import Education from './components/Education/Education';
 import Publications from './components/Publications/Publications';
 import Projects from './components/Projects/Projects';
-import Sidebar from './components/Sidebar/Sidebar';
+import Navigation from './components/Navigation/Navigation';
 import Footer from './components/Footer/Footer';
 import { ThemeProvider, createTheme} from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -273,7 +273,7 @@ function App() {
         <meta name="theme-color" content="#673AAC" /> 
       </Helmet>
       <Router>
-        <Sidebar themeMode={themeMode} toggleTheme={toggleTheme} />
+        <Navigation themeMode={themeMode} toggleTheme={toggleTheme} />
           <Routes>
             <Route path="/" element={<About />} />
             <Route path="/experience" element={<Experience />} />
