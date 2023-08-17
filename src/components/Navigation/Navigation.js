@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link as RouterLink, useLocation } from 'react-router-dom';
 import {
   AppBar, Toolbar, IconButton, Drawer, List, ListItem,
-  ListItemIcon, ListItemText, useMediaQuery, Box, Switch, useTheme
+  ListItemIcon, ListItemText, useMediaQuery, Box, useTheme
 } from '@mui/material';
 import { Brightness4, Brightness7, Menu as MenuIcon, Home, Work, School, Book, BarChart, Assessment } from '@mui/icons-material';
 import { styled } from '@mui/system';
