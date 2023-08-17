@@ -28,7 +28,7 @@ function ProjectCard({ title, description, imageUrl, repoUrl }) {
         </Typography>
       </CardContent>
       <CardActions>
-        <IconButton aria-label="go to github repository" onClick={() => window.open(repoUrl, '_blank')}>
+        <IconButton aria-label="go to github repository" onClick={() => window.open(repoUrl, '_blank')} sx={{ color: '#673AAC' }}>
           <GitHub />
         </IconButton>
       </CardActions>

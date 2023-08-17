@@ -14,7 +14,7 @@ const Footer = () => {
           <Tooltip title="My Linkedin Profile">
             <IconButton color="primary">
               <Link href="https://www.linkedin.com/in/jacob-mish-25915722a/" target="_blank" rel="noopener">
-                <LinkedInIcon />
+                <LinkedInIcon sx={{ color: '#673AAC' }}/>
               </Link>
             </IconButton>
             </Tooltip>
@@ -23,7 +23,7 @@ const Footer = () => {
           <Tooltip title="My Github Profile">
             <IconButton color="primary">
               <Link href="https://github.com/Feromond" target="_blank" rel="noopener">
-                <GitHubIcon />
+                <GitHubIcon sx={{ color: '#673AAC' }}/>
               </Link>
             </IconButton>
             </Tooltip>
@@ -32,7 +32,7 @@ const Footer = () => {
           <Tooltip title="My Email">
             <IconButton color="primary">
               <Link href="mailto:JacobPMish@gmail.com" target="_blank" rel="noopener">
-                <EmailIcon />
+                <EmailIcon sx={{ color: '#673AAC' }}/>
               </Link>
             </IconButton>
             </Tooltip>
@@ -41,7 +41,7 @@ const Footer = () => {
           <Tooltip title="My Phone Number">
             <IconButton color="primary">
               <Link href="tel:+1-403-836-9391" target="_blank" rel="noopener">
-                <PhoneIcon />
+                <PhoneIcon sx={{ color: '#673AAC' }} />
               </Link>
             </IconButton>
             </Tooltip>
