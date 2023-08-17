@@ -8,10 +8,11 @@ const Publications = () => {
 		{
 			title: 'Distributed Acoustic Sensing and Machine Learning: Rockfall Detection at Mt. Meager, B.C.',
 			authors: 'Mish, J., Ferguson, R., Mosher, C.',
-			conference: 'NSG2023 29th European Meeting of Environmental and Engineering Geophysics',
+			conference:
+				'NSG2023 29th European Meeting of Environmental and Engineering Geophysics, Sep 2023, Volume 2023, p.1 - 5',
 			year: 2023,
-			link: null,
-			additional: 'Accepted - DOI Available Soon',
+			link: 'https://doi.org/10.3997/2214-4609.202320030',
+			additional: '',
 		},
 		{
 			title: 'Distributed Acoustic Sensing of daylight on a glacier in Canada: Hotspot Monitoring',
