@@ -68,12 +68,12 @@ const softSkills = [
 	{
 		skill:
 			'Strong communication skills - demonstrated through the ability to convey complex technical information to a non-technical audience through presentations',
-		icon: <CommunicationIcon sx={{ color: 'primary.dark' }} />,
+		icon: <CommunicationIcon sx={{ color: 'primary.special' }} />,
 	},
 	{
 		skill:
 			'Collaboration skill - working with others and sharing ideas/feedback to produce effective results efficiently while maintaining a positive environment',
-		icon: <CollaborationIcon sx={{ color: 'primary.dark' }} />,
+		icon: <CollaborationIcon sx={{ color: 'primary.special' }} />,
 	},
 ];
 

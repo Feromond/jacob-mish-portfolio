@@ -31,7 +31,7 @@ const EducationCard = ({ Icon, title, subtitle, degree, listItems }) => {
 			>
 				<Paper elevation={3} sx={{ padding: '20px' }}>
 					<ListItemIcon>
-						<Icon color="primary" style={{ fontSize: 50 }} />
+						<Icon sx={{ color: '#673AAC' }} style={{ fontSize: 50 }} />
 					</ListItemIcon>
 					<Typography variant="h4" sx={{ fontWeight: '500' }}>
 						{title}
