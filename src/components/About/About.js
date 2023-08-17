@@ -2,6 +2,7 @@ import React from 'react';
 import { Container, Typography, Grid, Paper, Avatar } from '@mui/material';
 import jacobMishPortrait from '../../assets/jacob_mish_portrait.png';
 import backgroundImage from '../../assets/IMG_7244.jpeg';
+import ResumeDownloadButton from './ResumeDownloadButton';
 
 const About = () => (
   <Container >
@@ -40,6 +41,7 @@ const About = () => (
           </Typography>
         </Paper>
       </Grid>
+      <ResumeDownloadButton />
   </Container>
 
   
