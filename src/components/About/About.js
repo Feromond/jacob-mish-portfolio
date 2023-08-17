@@ -1,11 +1,28 @@
 import React from 'react';
 import { Container, Typography, Grid, Paper, Avatar } from '@mui/material';
+import { keyframes } from '@mui/system';
 import jacobMishPortrait from '../../assets/jacob_mish_portrait.png';
 import backgroundImage from '../../assets/IMG_7244.jpeg';
 import ResumeDownloadButton from './ResumeDownloadButton';
 
+const fadeInAnimation = keyframes`
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+`;
+
 const About = () => (
-	<Container>
+	<Container
+		sx={{
+			animation: `${fadeInAnimation} 0.8s ease-in-out`,
+			animationFillMode: 'forwards',
+		}}
+	>
 		<Grid
 			container
 			spacing={0}
