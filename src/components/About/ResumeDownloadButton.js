@@ -1,7 +1,9 @@
 import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
+import Tooltip from '@mui/material/Tooltip';
 import { styled } from '@mui/system';
 import resumePDF from '../../assets/Jacob_Mish_Resume.pdf'
+
 
 
 const StyledDownloadButton = styled(Button)(({ theme }) => ({
@@ -17,13 +19,15 @@ const StyledDownloadButton = styled(Button)(({ theme }) => ({
 function ResumeDownloadButton() {
   return (
     <Box display="flex" justifyContent="center">
-        <StyledDownloadButton 
-        variant="contained" 
-        href={resumePDF}
-        download="Jacob_Mish_Resume.pdf"
-        >
-        Download Resume
-        </StyledDownloadButton>
+        <Tooltip title="Download my updated resume created in LaTeX">
+            <StyledDownloadButton 
+            variant="contained" 
+            href={resumePDF}
+            download="Jacob_Mish_Resume.pdf"
+            >
+            Download Resume
+            </StyledDownloadButton>
+        </Tooltip>
     </Box>
         
   );
