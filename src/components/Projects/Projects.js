@@ -2,7 +2,7 @@ import React from 'react';
 import { Container, Grid, Typography, Box } from '@mui/material';
 import { styled } from '@mui/system';
 import ProjectCard from './ProjectCard';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import mlProjectDemoImg from '../../assets/ML_project_Demo_Img.jpeg'
 import portfolioWebsiteImg from '../../assets/my_portfolio_website_screenshot.png'
 import filteringTechniquesImg from '../../assets/filtering_techniques_img.png'
