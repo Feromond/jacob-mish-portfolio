@@ -51,7 +51,7 @@ const Footer = () => {
 					© Jacob Mish 2023
 				</Typography>
 				<Typography variant="body2" align="center" sx={{ marginTop: '10px' }}>
-					Website Still Under Construction - Started On August 9th
+					Website Still Under Construction - Started On August 9th, 2023 - Last Update: August 17th 2023.
 				</Typography>
 				<Typography variant="body2" align="center" sx={{ marginTop: '10px' }}>
 					Created Using React: https://github.com/Feromond/jacob-mish-portfolio
