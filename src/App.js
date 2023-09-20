@@ -1,5 +1,5 @@
 // src/App.js
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import About from './components/About/About';
@@ -258,10 +258,21 @@ const lightTheme = createTheme({
 });
 
 function App() {
-	const [themeMode, setThemeMode] = useState('light');
+	const storedTheme = localStorage.getItem('themeMode') || 'light';
+	const [themeMode, setThemeMode] = useState(storedTheme);
 	const toggleTheme = () => {
-		setThemeMode((prevMode) => (prevMode === 'dark' ? 'light' : 'dark'));
+		setThemeMode((prevMode) => {
+			const newMode = prevMode === 'dark' ? 'light' : 'dark';
+			localStorage.setItem('themeMode', newMode);
+			return newMode;
+		});
 	};
+	useEffect(() => {
+		const localTheme = localStorage.getItem('themeMode');
+		if (localTheme) {
+			setThemeMode(localTheme);
+		}
+	}, []);
 
 	const theme = themeMode === 'dark' ? darkTheme : lightTheme;
 	return (
