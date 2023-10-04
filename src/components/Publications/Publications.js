@@ -1,6 +1,7 @@
 import React from 'react';
 import { Container, Typography, Card, CardContent, CardHeader, Link, Divider, Box } from '@mui/material';
 import LinkIcon from '@mui/icons-material/Link';
+import DownloadIcon from '@mui/icons-material/Download';
 import { useSpring, animated } from 'react-spring';
 import mishFergusonMosher2023 from '../../assets/mishFergusonMosher2023.pdf';
 import fergusonMosherDettmerMish2021 from '../../assets/ns2021FergEtAlDas.pdf';
@@ -68,7 +69,7 @@ const Publications = () => {
 								<Typography variant="body2">{publication.year}</Typography>
 								{publication.link && (
 									<Link href={publication.link} target="_blank" rel="noopener">
-										<Typography variant="body2" color="primary.special">
+										<Typography variant="body1" color="primary.special">
 											<LinkIcon /> View Publication
 										</Typography>
 									</Link>
@@ -78,14 +79,23 @@ const Publications = () => {
 						</Card>
 						{activeTray === index && (
 							<Box
-								sx={{ padding: '16px', backgroundColor: 'primary.background', borderRadius: '8px', marginTop: '8px' }}
+								sx={{
+									padding: '8px',
+									backgroundColor: 'primary.special',
+									borderRadius: '8px',
+									marginTop: '5px',
+									justifyContent: 'center',
+								}}
 							>
 								{publication.pdf ? (
 									<Link href={publication.pdf} download>
-										Download PDF
+										<Typography color="#ffff">
+											<DownloadIcon />
+											Download PDF
+										</Typography>
 									</Link>
 								) : (
-									<Typography>No PDF available for download.</Typography>
+									<Typography color="#ffff">No PDF available for download.</Typography>
 								)}
 							</Box>
 						)}
