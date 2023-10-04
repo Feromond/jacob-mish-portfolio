@@ -2,6 +2,8 @@ import React from 'react';
 import { Container, Typography, Card, CardContent, CardHeader, Link, Divider, Box } from '@mui/material';
 import LinkIcon from '@mui/icons-material/Link';
 import { useSpring, animated } from 'react-spring';
+import mishFergusonMosher2023 from '../../assets/mishFergusonMosher2023.pdf';
+import fergusonMosherDettmerMish2021 from '../../assets/ns2021FergEtAlDas.pdf';
 
 const Publications = () => {
 	const publications = [
@@ -13,6 +15,7 @@ const Publications = () => {
 			year: 2023,
 			link: 'https://doi.org/10.3997/2214-4609.202320030',
 			additional: '',
+			pdf: mishFergusonMosher2023,
 		},
 		{
 			title: 'Distributed Acoustic Sensing of daylight on a glacier in Canada: Hotspot Monitoring',
@@ -21,6 +24,7 @@ const Publications = () => {
 			year: 2021,
 			link: 'https://doi.org/10.3997/2214-4609.202120218',
 			additional: '',
+			pdf: fergusonMosherDettmerMish2021,
 		},
 		{
 			title: 'Javaseis cloud: A cloud-native framework for seismic io.',
@@ -38,6 +42,8 @@ const Publications = () => {
 		delay: 160,
 	});
 
+	const [activeTray, setActiveTray] = React.useState(null);
+
 	return (
 		<Container sx={{ marginTop: '30px' }}>
 			<Typography variant="h2" sx={{ marginBottom: '20px' }}>
@@ -54,6 +60,7 @@ const Publications = () => {
 								transform: 'scale(1)',
 								'&:hover': { transform: 'scale(1.03)', boxShadow: '5px 5px 15px rgba(0,0,0,0.3)' },
 							}}
+							onClick={() => setActiveTray(index === activeTray ? null : index)}
 						>
 							<CardHeader title={publication.title} subheader={publication.authors} />
 							<CardContent>
@@ -61,7 +68,7 @@ const Publications = () => {
 								<Typography variant="body2">{publication.year}</Typography>
 								{publication.link && (
 									<Link href={publication.link} target="_blank" rel="noopener">
-										<Typography variant="body2" color="primary">
+										<Typography variant="body2" color="primary.special">
 											<LinkIcon /> View Publication
 										</Typography>
 									</Link>
@@ -69,6 +76,19 @@ const Publications = () => {
 								{publication.additional && <Typography variant="body2">{publication.additional}</Typography>}
 							</CardContent>
 						</Card>
+						{activeTray === index && (
+							<Box
+								sx={{ padding: '16px', backgroundColor: 'primary.background', borderRadius: '8px', marginTop: '8px' }}
+							>
+								{publication.pdf ? (
+									<Link href={publication.pdf} download>
+										Download PDF
+									</Link>
+								) : (
+									<Typography>No PDF available for download.</Typography>
+								)}
+							</Box>
+						)}
 						{index < publications.length - 1 && <Divider />}
 					</Box>
 				))}
