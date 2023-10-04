@@ -2,7 +2,7 @@ import React from 'react';
 import { Container, Typography, Grid, Paper, Avatar } from '@mui/material';
 import { keyframes } from '@mui/system';
 import jacobMishPortrait from '../../assets/jacob_mish_portrait.png';
-import backgroundImage from '../../assets/IMG_7244.jpeg';
+import backgroundImage from '../../assets/IMG_7244.webp';
 import ResumeDownloadButton from './ResumeDownloadButton';
 
 const fadeInAnimation = keyframes`
