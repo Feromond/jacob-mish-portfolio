@@ -16,6 +16,7 @@ import strathconaLogo from '../../assets/strathconaLogo.png';
 import altaMLLogo from '../../assets/altaml-logo.png';
 import uofcLogo from '../../assets/uofcLogo.png';
 import irisLogo from '../../assets/irisLogo.png';
+import circuitStreamLogo from '../../assets/circuitstreamlogo.jpg';
 
 const experiences = [
 	{
@@ -28,7 +29,7 @@ const experiences = [
 		zoom: 1,
 		responsibilities: [
 			'Utilized LLM Transformers to create a Q&A chatbot with contextual knowledge of company HR documentation.',
-			'Developed a Streamlit-based web app featuring Azure Single Sign-On authentication, managed group-based permissions, and integration with multiple APIs, centralizing access to diverse tools for enhanced user experience.',
+			'Developed a web app featuring Azure Single Sign-On authentication, managed group-based permissions, and integration with multiple APIs, centralizing access to diverse tools for enhanced user experience.',
 			'Utilize various REST APIs to collect data, automate tasks, and gather insights for business intelligence purposes.',
 			'Design and develop curated tables from raw data to provide valuable insights for various teams across the organization.',
 			'Create automated workflows for efficient data collection, cleaning, and transformation, generating curated data ready for analysis and visualization.',
@@ -69,6 +70,21 @@ const experiences = [
 			'Generated figures and graphics to display analysis and results',
 			'Built interpretation of results from statistical analysis',
 			'Published in Near Surface Geoscience Conference & Exhibition',
+		],
+	},
+	{
+		title: 'AI/Machine Learning Consultant (Contract)',
+		duration: 'October 2023 - Present',
+		company: 'CircutStream',
+		location: 'Calgary, AB - Remote',
+		logo: circuitStreamLogo,
+		shape: 'round',
+		zoom: 1,
+		responsibilities: [
+			'Provided advice and recommendations for an Ai/Machine Learning Pre-University Course',
+			'Reviewed course outline, learning objectives, and course content',
+			'Provided feedback on goals and provided creative solutions and ideas for course design',
+			'Validated information and content to ensure accuracy and value',
 		],
 	},
 	{
