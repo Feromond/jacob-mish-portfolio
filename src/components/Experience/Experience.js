@@ -51,6 +51,8 @@ const experiences = [
 			'Collaborated in the development of a comprehensive Machine Learning Pre-University Course, focusing on practical, student-centered learning',
 			'Assisted in the meticulous planning of the course schedule, ensuring a coherent and progressive learning experience',
 			'Played a key role in curating and determining the course content for each session, aligning theoretical knowledge with practical application',
+			'Engineered the Discord bot to offer interactive and personalized topic recommendations, enhancing user engagement and the learning experience',
+			'Continuously validated and refined course content and the final project, guaranteeing accuracy, relevance, and high educational value.',
 		],
 	},
 	{
