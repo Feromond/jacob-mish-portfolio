@@ -39,6 +39,21 @@ const experiences = [
 		],
 	},
 	{
+		title: 'AI/Machine Learning Consultant (Contract)',
+		duration: 'October 2023 - Present',
+		company: 'CircutStream',
+		location: 'Calgary, AB - Remote',
+		logo: circuitStreamLogo,
+		shape: 'round',
+		zoom: 1,
+		responsibilities: [
+			'Spearheaded the creation of the capstone project, a sophisticated Discord bot that integrates OpenAI APIs and traditional machine learning models, like recommender systems.',
+			'Collaborated in the development of a comprehensive Machine Learning Pre-University Course, focusing on practical, student-centered learning',
+			'Assisted in the meticulous planning of the course schedule, ensuring a coherent and progressive learning experience',
+			'Played a key role in curating and determining the course content for each session, aligning theoretical knowledge with practical application',
+		],
+	},
+	{
 		title: 'Associate Machine Learning Developer (4-Month Contract)',
 		duration: 'September 2022 - December 2022',
 		company: 'AltaML',
@@ -70,21 +85,6 @@ const experiences = [
 			'Generated figures and graphics to display analysis and results',
 			'Built interpretation of results from statistical analysis',
 			'Published in Near Surface Geoscience Conference & Exhibition',
-		],
-	},
-	{
-		title: 'AI/Machine Learning Consultant (Contract)',
-		duration: 'October 2023 - Present',
-		company: 'CircutStream',
-		location: 'Calgary, AB - Remote',
-		logo: circuitStreamLogo,
-		shape: 'round',
-		zoom: 1,
-		responsibilities: [
-			'Spearheaded the creation of the capstone project, a sophisticated Discord bot that integrates OpenAI APIs and traditional machine learning models, like recommender systems.',
-			'Collaborated in the development of a comprehensive Machine Learning Pre-University Course, focusing on practical, student-centered learning',
-			'Assisted in the meticulous planning of the course schedule, ensuring a coherent and progressive learning experience',
-			'Played a key role in curating and determining the course content for each session, aligning theoretical knowledge with practical application',
 		],
 	},
 	{
