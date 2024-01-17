@@ -81,10 +81,10 @@ const experiences = [
 		shape: 'round',
 		zoom: 1,
 		responsibilities: [
-			'Provided advice and recommendations for an Ai/Machine Learning Pre-University Course',
-			'Reviewed course outline, learning objectives, and course content',
-			'Provided feedback on goals and provided creative solutions and ideas for course design',
-			'Validated information and content to ensure accuracy and value',
+			'Spearheaded the creation of the capstone project, a sophisticated Discord bot that integrates OpenAI APIs and traditional machine learning models, like recommender systems.',
+			'Collaborated in the development of a comprehensive Machine Learning Pre-University Course, focusing on practical, student-centered learning',
+			'Assisted in the meticulous planning of the course schedule, ensuring a coherent and progressive learning experience',
+			'Played a key role in curating and determining the course content for each session, aligning theoretical knowledge with practical application',
 		],
 	},
 	{
