@@ -9,6 +9,7 @@ import filteringTechniquesImg from '../../assets/filtering_techniques_img.png';
 import moodTrackerJavaImg from '../../assets/MoodTrackerJavaImg.png';
 import fftRustImg from '../../assets/fftrustImg.png';
 import hypixelAPIrustImg from '../../assets/hypixelbazzarRustImg.png';
+import rustSnakeGameImg from '../../assets/rust_snake_game.jpeg';
 
 const ProjectHeader = styled(Typography)`
 	margin-bottom: 40px;
@@ -71,6 +72,12 @@ function ProjectsPage() {
 			description: 'A mood tracker for daily recording of how a person feels using a JavaFX UI.',
 			imageUrl: moodTrackerJavaImg,
 			repoUrl: 'https://github.com/Feromond/MoodTrackerJavaEdition',
+		},
+		{
+			title: 'Rust Snake Game',
+			description: 'A very simple snake game created in the programming langauge Rust!',
+			imageUrl: rustSnakeGameImg,
+			repoUrl: 'https://github.com/Feromond/rust_snake_game',
 		},
 	];
 
