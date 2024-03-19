@@ -49,6 +49,13 @@ function ProjectsPage() {
 			repoUrl: 'https://github.com/Feromond/jacob-mish-portfolio',
 		},
 		{
+			title: 'Rust Snake Game',
+			description:
+				'A very simple snake game created in the programming langauge Rust! Supports all kinds of collisions, maintains highscores, includes a main menu screen.',
+			imageUrl: rustSnakeGameImg,
+			repoUrl: 'https://github.com/Feromond/rust_snake_game',
+		},
+		{
 			title: 'Hypixel Bazzar API - Rust',
 			description:
 				'Uses hypixel-api to grab bazaar item product information in near-real-time and displays the data visually in the command line.',
@@ -72,12 +79,6 @@ function ProjectsPage() {
 			description: 'A mood tracker for daily recording of how a person feels using a JavaFX UI.',
 			imageUrl: moodTrackerJavaImg,
 			repoUrl: 'https://github.com/Feromond/MoodTrackerJavaEdition',
-		},
-		{
-			title: 'Rust Snake Game',
-			description: 'A very simple snake game created in the programming langauge Rust!',
-			imageUrl: rustSnakeGameImg,
-			repoUrl: 'https://github.com/Feromond/rust_snake_game',
 		},
 	];
 
